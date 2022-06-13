@@ -1,1 +1,0 @@
-testando os CustomElementRegistry
