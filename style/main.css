@@ -15,12 +15,14 @@ body {
     background: var(--preta);
     font-family: 'Times New Roman', Times, serif;
     color: white;
+    
 }
 
 header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 header .logo {
@@ -28,22 +30,111 @@ header .logo {
     font-family: 'Arial Black', times;
     font-size: 40px;
     margin-left: 5px;
+    text-decoration: none;
 }
 
 header nav a {
     text-decoration: none;
     color: #AAA;
-    margin-right: 10px;
+    font-size: 20px;
 }
 
 header nav a:hover {
     color: #fff;
 }
 
+/*menu hambuger*/
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .4rem
+}
+#menu a {
+    display: block;
+    padding: .2rem;
+}
+#btn-mobile {
+    display: none;
+}
+@media (max-width: 750px) {
+
+    #menu {
+        /* display: none; */
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 56px;
+        right: 0px;
+        background: var(--preta);        
+        height: 0;
+        transition: .8s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+
+    }
+
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu a {
+        padding: 1.5rem 0;
+        margin: 0 2rem;
+        border-bottom: 3px solid rgba(0, 0, 0, .05);
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        color: var(--vermelho);
+    }
+
+    #hamburger {
+        width: 20px;
+        border-top: 2px solid;
+    }
+
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        width: 20px;
+        display: block;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+}
+
+/*final menu hambuger*/
+
 /*Filme Principal*/
 
 .filme-principal {
-    font-size: 16px;
+    font-size: 15px;
     background: linear-gradient(rgb(0,0,0,.08),rgb(0,0,0,.08)100%), url('/img/capa-dr.jpg');
     height: 500px;
     background-size: cover;
@@ -56,6 +147,7 @@ header nav a:hover {
 .filme-principal .descricao {
     margin-top: 10px;
     margin-bottom: 40px;
+    font-size: 18px;
 
 }
 
@@ -89,6 +181,7 @@ header nav a:hover {
 
 .container {
     margin-left: 25px;
+    margin-right: 20px;
 }
 
 .filme-principal .container {
@@ -104,6 +197,7 @@ header nav a:hover {
 
 .carrosel-filmes {
     margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .item {
@@ -114,3 +208,9 @@ header nav a:hover {
     width: 105%;
 }
 
+.titulo-carousel{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
