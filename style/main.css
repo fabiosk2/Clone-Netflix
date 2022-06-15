@@ -52,9 +52,11 @@ header nav a:hover {
 #menu a {
     display: block;
     padding: .2rem;
+    
 }
 #btn-mobile {
     display: none;
+    
 }
 @media (max-width: 750px) {
 
@@ -166,13 +168,22 @@ header nav a:hover {
     font-size: 12px;
     border-radius: 5px;
     cursor: pointer;
-    transition: .3s ease all;
+    transition: .3s ease all;    
 }
 
 .botao:hover{
     background-color: white;
     color:black;
     
+}
+
+.botao a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.botao a:hover{
+    color:black
 }
 
 .botao i {
@@ -192,6 +203,7 @@ header nav a:hover {
     height: 100%;
     width: 100%;
     display: inline-block;
+    position: relative;
     
 }
 
@@ -200,12 +212,12 @@ header nav a:hover {
     margin-bottom: 50px;
 }
 
-.item {
+.item:hover{
     cursor: pointer;
 }
 
 .item:hover{
-    width: 105%;
+    width: 102%;
 }
 
 .titulo-carousel{
@@ -213,4 +225,21 @@ header nav a:hover {
     font-size: 30px;
     padding-bottom: 20px;
     padding-left: 10px;
+}
+
+.playfilmes {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: none; 
+
+}
+
+.botaoplay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(83, 83, 83, 0.863);
+    
 }
