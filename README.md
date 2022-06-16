@@ -10,7 +10,7 @@ Elementos adicionais fora do projeto do professor.
 2 - adicionei as sessões do menu nav.<br>
 3 - botei os cursores pointer.<br>
 4 - linkei  o nav com as sessões.<br>
-5 - adiconei
+5 - adiconei efeito de destaques nos filmes ao passar o cursor.
 
 
 
